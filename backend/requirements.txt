@@ -1,0 +1,7 @@
+flask
+joblib
+sklearn
+nltk
+pandas
+numpy
+azureml-sdk

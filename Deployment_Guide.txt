@@ -1,0 +1,40 @@
+# Fake News Detection - Deployment Guide
+
+## 1. Install Dependencies
+
+### Backend (Flask API)
+```
+cd backend
+pip install -r requirements.txt
+python train_model.py  # Train model (optional)
+python app.py  # Start API
+```
+
+### Frontend (React.js)
+```
+cd frontend
+npm install
+npm start
+```
+
+## 2. Deploy on Microsoft Azure
+
+### Backend Deployment
+1. Login to Azure and create a **Web App** (Flask API).
+2. Deploy backend files (`backend/`) to Azure using **Azure App Service**.
+3. Update `app.py` to reflect the Azure-hosted API URL.
+
+### Frontend Deployment
+1. Use **Azure Static Web Apps** for frontend deployment.
+2. Update `App.js` with the correct backend API URL.
+3. Deploy using Azure CLI or GitHub Actions.
+
+## 3. Docker Deployment (Optional)
+- Use `Dockerfile` to containerize the app.
+- Deploy using **Azure Container Instances (ACI)**.
+
+## 4. Testing the Application
+1. Open the frontend in a browser.
+2. Enter news text and check if it's **Real** or **Fake**.
+
+Happy Coding! 🚀
